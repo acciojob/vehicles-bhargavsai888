@@ -33,12 +33,15 @@ this.isManual=isManual;
     }
 
     public void changeSpeed(int newSpeed, int newDirection){
-        this.move(newSpeed,newDirection);
+        super.move(newSpeed,newDirection);
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
 
     public int getWheels() {
         return wheels;
+    }
+    public int getCurrentDirection(){
+    return super.getCurrentDirection();
     }
 
     public void setWheels(int wheels) {
